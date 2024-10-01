@@ -1,4 +1,4 @@
-# Deploying RHEL vm's to be used for Ansible Automation platform and a lane in Azure
+# Deploying RHEL vm's to be used for Ansible Automation Platform and a lane in Azure
 
 # Terraform Azure provider and minimum version declaration
 terraform {
@@ -10,9 +10,9 @@ terraform {
   }
 }
 
-# Configure the Azure provider
+# Configure the Azure provider.  Add the specific subscription id in quotes below
 provider "azurerm" {
-  subscription_id = "e6cc4314-b5cb-41d8-bcd9-02f438f59b84"
+  subscription_id = "<replace with subscripton id>"
   features {
     resource_group {
       prevent_deletion_if_contains_resources = false
@@ -28,7 +28,6 @@ provider "azurerm" {
 # Variable Declarations
 variable "pass" {
   type = string
-  default = "5ecur!ty_10I"
 }
 variable "region" {
   type = string
