@@ -12,7 +12,7 @@ terraform {
 
 # Configure the Azure provider
 provider "azurerm" {
-  subscription_id = "e6cc4314-b5cb-41d8-bcd9-02f438f59b84"
+  subscription_id = "<replace with the specific azure subscription id>"
   features {
     resource_group {
       prevent_deletion_if_contains_resources = false
@@ -28,11 +28,10 @@ provider "azurerm" {
 # Variable Declarations
 variable "pass" {
   type = string
-  default = "5ecur!ty_10I"
 }
 variable "region" {
   type = string
-  default = "northcentralus"
+  #default = "northcentralus"
 }
 variable "rg_name" {
   type = string
@@ -47,6 +46,12 @@ variable "eda_fqdn" {
   type = string
 }
 variable "db_fqdn" {
+  type = string
+}
+variable "admin_public_ip" {
+  type = string
+}
+variable "admin_user" {
   type = string
 }
 
@@ -85,7 +90,7 @@ resource "azurerm_network_security_group" "nsg_int" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "140.209.216.37"
+    source_address_prefix      = ${var.admin_public_ip}
     destination_address_prefix = "*"
   }
 }  
@@ -183,7 +188,7 @@ resource "azurerm_linux_virtual_machine" "ac-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = "shi"
+  admin_username      = ${var.admin_user}
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -225,7 +230,7 @@ resource "azurerm_linux_virtual_machine" "ah-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = "shi"
+  admin_username      = ${var.admin_user}
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -266,7 +271,7 @@ resource "azurerm_linux_virtual_machine" "eda-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = "shi"
+  admin_username      = ${var.admin_user}
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -307,7 +312,7 @@ resource "azurerm_linux_virtual_machine" "db-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = "shi"
+  admin_username      = ${var.admin_user}
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
