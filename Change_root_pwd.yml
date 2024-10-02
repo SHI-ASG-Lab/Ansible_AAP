@@ -1,0 +1,11 @@
+---
+  - hosts: all
+    vars_files: Change_root_pwd_vars.yml
+    become: true
+    become_method: sudo
+        
+    tasks:
+      - name: Change root password
+        ansible.builtin.user:
+          name: root
+          password: "{{ userpwd | password_hash('sha512') }}"

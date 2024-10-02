@@ -1,0 +1,12 @@
+---
+  - hosts: all
+    vars_files: Change_root_pwd_vars.yml
+    become: true
+    become_method: sudo
+        
+    tasks:
+      - name: Issue shell command in linux
+        ansible.builtin.command: "{{ registration }}"
+
+          
+          
