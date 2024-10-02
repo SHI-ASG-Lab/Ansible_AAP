@@ -10,9 +10,9 @@ set -e
 
 # IPs are set statically via the terraform deployment.  Change variables to fit.
 #IP_AC=10.250.1.5
-export IP_AH=10.250.1.6
-export IP_EDA=10.250.1.7
-export IP_DB=10.250.1.8
+IP_AH=10.250.1.6
+IP_EDA=10.250.1.7
+IP_DB=10.250.1.8
 
 
 # Check for root permissions
