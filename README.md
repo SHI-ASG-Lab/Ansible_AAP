@@ -20,7 +20,7 @@ Instructions for use:
     - terraform init
     - terraform apply
 4.  Enter the FQDN names of each vm, name of the resource group & admin password when prompted and yes to deploy.  The admin_public_ip prompt is asking for the public ip of the user who will be accessing.  If it's you using this, then figure out your public ip and use that.  
-5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Copy the public ip address and connect via SSH
+5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Copy the public ip address and connect via SSH.  The user created is called "shi"
 6.  Download the scripts from the repo to the home directory.  Make each of the prep scripts executable with -  chmod +x prep*
 7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
 8.  Run the second script with the local user - ./prep_1_shi.bash  *This script is interactive and the user must follow the on screen prompts.  When the RSA key is made, accepts the defaults and enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
