@@ -28,3 +28,5 @@ Instructions for use:
 
 The third script will launch the AAP setup script
 
+This script is download the AAP installer zip from a static storage account, so there ia a possibility it's out of date.
+
