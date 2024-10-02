@@ -188,7 +188,7 @@ resource "azurerm_linux_virtual_machine" "ac-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = ${var.admin_user}
+  admin_username      = "shi"
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -230,7 +230,7 @@ resource "azurerm_linux_virtual_machine" "ah-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = ${var.admin_user}
+  admin_username      = "shi"
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -271,7 +271,7 @@ resource "azurerm_linux_virtual_machine" "eda-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = ${var.admin_user}
+  admin_username      = "shi"
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
@@ -312,7 +312,7 @@ resource "azurerm_linux_virtual_machine" "db-vm" {
   resource_group_name = azurerm_resource_group.lane_rg.name
   location            = azurerm_resource_group.lane_rg.location
   size                = "Standard_D4ds_v4"
-  admin_username      = ${var.admin_user}
+  admin_username      = "shi"
   admin_password      = "${var.pass}"
   disable_password_authentication = false
   tags                = {
