@@ -28,5 +28,5 @@ Instructions for use:
 
 The third script will launch the AAP setup script
 
-This script is download the AAP installer zip from a static storage account, so there ia a possibility it's out of date.
+This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_1_shi.bash, line 81 with the updated link and file name.  And update line 83 with new filename to unzip.  
 
