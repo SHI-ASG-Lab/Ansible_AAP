@@ -1,4 +1,4 @@
-##Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
+Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
 
 The AAP.tf file is the terraform code to deploy the following - 
  - Resource group
