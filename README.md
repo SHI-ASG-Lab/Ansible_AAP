@@ -24,9 +24,9 @@ Instructions for use:
 6.  Download the scripts from the repo to the home directory and change to that directory.  Make each of the prep scripts executable with -  chmod +x prep* 
 7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
 8.  Run the second script with the shi user - ./prep_1_shi.bash
-   - This script is interactive and the user must follow the prompts.  When the RSA key is made, accept the defaults and hit enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
+    - This script is interactive and the user must follow the prompts.  When the RSA key is made, accept the defaults and hit enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
 10.  Run the third script with root - sudo ./prep_2_sudo.bash
-   - This script is also interactive.  Follow and provide the root password set in last step during the SSH key copy.
+    - This script is also interactive.  Follow and provide the root password set in last step during the SSH key copy.
 
 The third script will launch the AAP setup script
 
