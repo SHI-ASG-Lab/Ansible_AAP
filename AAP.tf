@@ -51,9 +51,6 @@ variable "db_fqdn" {
 variable "admin_public_ip" {
   type = string
 }
-variable "admin_user" {
-  type = string
-}
 
 # Create resource group
 resource "azurerm_resource_group" "lane_rg" {
