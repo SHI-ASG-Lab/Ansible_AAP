@@ -20,10 +20,10 @@ Instructions for use:
     - terraform init
     - terraform apply
 4.  Enter the FQDN names of each vm, name of the resource group & admin password when prompted and yes to deploy.  The admin_public_ip prompt is asking for the public ip of the user who will be accessing.  If it's you using this, then figure out your public ip and use that.  
-5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Select the controller vm (name will be the ac_fqdn from the tf deployment), copy the public ip address and connect via SSH using a terminal or command shell.  The user created is called "shi" - ssh shi@<public_ip_of_controller_vm>.  Use the password supplied during the tf deployment.
-6.  Download the scripts from the repo to the home directory.  Make each of the prep scripts executable with -  chmod +x prep*
+5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Select the controller vm (name will be the ac_fqdn from the tf deployment), copy the public ip address and connect via SSH using a terminal or command shell.  The user created is called "shi" - ssh shi@<public_ip_of_controller_vm>.  Use the password supplied during the tf deployment (pass value).
+6.  Download the scripts from the repo to the home directory and change to that directory.  Make each of the prep scripts executable with -  chmod +x prep* 
 7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
-8.  Run the second script with the local user - ./prep_1_shi.bash  *This script is interactive and the user must follow the on screen prompts.  When the RSA key is made, accepts the defaults and enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
+8.  Run the second script with the shi user - ./prep_1_shi.bash  *This script is interactive and the user must follow the on screen prompts.  When the RSA key is made, accepts the defaults and enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
 9.  Run the third script with root - sudo ./prep_2_sudo.bash  *This script is also interactive.  Follow and provide the root password set in last step during the SSH key copy.
 
 The third script will launch the AAP setup script
