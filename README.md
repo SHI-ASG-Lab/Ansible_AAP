@@ -7,7 +7,7 @@ The AAP.tf file is the terraform code to deploy the following -
  - Public IP on the Controller for connectivity
  - Function tags are applied to all vm's
 
-The TF code will prompt the user for the FQDN for each device, a resource group name, an admin account name and admin password.  
+The TF code will prompt the user for the FQDN for each device, a resource group name, the public ip of the user, and the admin password.  
 
 The prep_#_* files are scripts that will setup all pre-reqs for the AAP installation.  
 
