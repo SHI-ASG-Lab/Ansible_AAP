@@ -15,7 +15,7 @@ The prep scripts must be run in order 0 being first and 2 being last.
 
 Instructions for use:
 1.  Login to the Azure portal with rights to create resources and launch the cloud shell.
-2.  Download the repo to the cloud shell with git or upload the files through the shell.  The only files needed in the cloud shell is the AAP.tf.  Edit the AAP.tf file with a text editor and add the Azure subscription ID, in quotes, after the equals on line 15.  Ignore the prep scripts or delete them from the cloud shell.
+2.  Download the repo to the cloud shell with git or upload the AAP.tf file through the shell.  The only files needed in the cloud shell is the AAP.tf.  Edit the AAP.tf file with a text editor and add the Azure subscription ID, in quotes, after the equals on line 15.  Ignore the prep scripts or delete them from the cloud shell.
 3.  Deploy terraform code with
     - terraform init
     - terraform apply
