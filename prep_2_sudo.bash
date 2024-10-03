@@ -65,7 +65,7 @@ read -p "Pausing for error checking.  Press Enter to continue" NOISE
 echo
 echo
 echo "Removing temporary install file"
-# rm /home/shi/temp.log
+rm /home/shi/temp.log
 echo
 echo
 echo
