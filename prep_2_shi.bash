@@ -84,7 +84,7 @@ echo
 
 
 # Change to unzipped ansible directory
-cd /home/shi/ansible-automation-platform-setup-2.5-1.tar.gz
+cd /home/shi/ansible-automation-platform-setup-2.5-1
 echo
 
 
