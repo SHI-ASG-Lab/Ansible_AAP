@@ -53,6 +53,9 @@ variable "db_fqdn" {
 variable "admin_public_ip" {
   type = string
 }
+variable "aap_version" {
+  type = string
+}
 
 # Create resource group
 resource "azurerm_resource_group" "lane_rg" {
@@ -62,6 +65,7 @@ resource "azurerm_resource_group" "lane_rg" {
     Vendor        = "RedHat"
     Product       = "Ansible Automation Platform"
     Region        = "${var.region}"
+    AAP_version   = "${var.aap_version}
   }
 }
 
