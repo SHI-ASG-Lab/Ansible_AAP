@@ -65,7 +65,7 @@ resource "azurerm_resource_group" "lane_rg" {
     Vendor        = "RedHat"
     Product       = "Ansible Automation Platform"
     Region        = "${var.region}"
-    Ansible_Version = ${var.aap_version}
+    Ansible_Version = "${var.aap_version}"
   }
 }
 
