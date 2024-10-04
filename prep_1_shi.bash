@@ -47,7 +47,7 @@ ssh-copy-id "$EDA"
 echo
 
 
-# Installing ansible-core, downloading/moving the ansbile playbooks and vars file
+# Installing ansible-core, creating a working directory & moving the ansbile playbooks
 sudo dnf -y install ansible-core
 mkdir /home/shi/ansibleprep
 cd /home/shi/ansibleprep
