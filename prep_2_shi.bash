@@ -51,8 +51,8 @@ echo
 sudo dnf -y install ansible-core
 mkdir /home/shi/ansibleprep
 cd /home/shi/ansibleprep
-mv /home/shi/Ansible_AAP/Change_root_pwd.yml /home/shi/ansibleprep/Change_root_pwd.yml
-mv /home/shi/Ansible_AAP/Shell_command.yml /home/shi/ansibleprep/Shell_command.yml
+mv /home/shi/Ansible_AAP/change_root_pwd.yml /home/shi/ansibleprep/change_root_pwd.yml
+mv /home/shi/Ansible_AAP/shell_command.yml /home/shi/ansibleprep/shell_command.yml
 
 # Creating the ansible variables file, adding the user's password & create the inventory file with the remote vm's info 
 echo "userpwd: $PASS" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
@@ -63,8 +63,8 @@ echo "$DB" >> /home/shi/ansibleprep/inventory.yml
 
 
 # Execute playbook to set the root password and register the other vm's
-ansible-playbook -i /home/shi/ansibleprep/inventory.yml /home/shi/ansibleprep/Change_root_pwd.yml
-ansible-playbook -i /home/shi/ansibleprep/inventory.yml /home/shi/ansibleprep/Shell_command.yml
+ansible-playbook -i /home/shi/ansibleprep/inventory.yml /home/shi/ansibleprep/change_root_pwd.yml
+ansible-playbook -i /home/shi/ansibleprep/inventory.yml /home/shi/ansibleprep/shell_command.yml
 
 
 # Deleting vars file with the password
@@ -84,7 +84,7 @@ echo
 
 
 # Change to unzipped ansible directory
-cd /home/shi/ansible-automation-platform-setup-2.5-1.tar.gz
+cd /home/shi/ansible-automation-platform-setup-2.5-1
 echo
 
 
