@@ -1,6 +1,6 @@
 Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
 
-The AAP.tf file is the terraform code to deploy the following - 
+The ansible_env.tf file is the terraform code to deploy the following - 
  - Resource group
  - 4x RHEL 9.4 vm's
  - Network security that only allows SSH connections from a specific IP
@@ -15,7 +15,7 @@ The prep scripts must be run in order 0 being first and 2 being last.
 
 Instructions for use:
 1.  Login to the Azure portal with rights to create resources and launch the cloud shell.
-2.  Download the repo to the cloud shell with git or upload the AAP.tf file through the shell.  The only files needed in the cloud shell is the AAP.tf.  Ignore the prep scripts or delete them from the cloud shell.  You can create a terraform.tfvars file with the variables and values for faster deployment.  Variables are written - variable_name = "value"
+2.  Download the repo to the cloud shell with git or upload the ansible_env.tf file through the shell.  The only files needed in the cloud shell is the ansible_env.tf.  Ignore the prep scripts or delete them from the cloud shell.  You can create a terraform.tfvars file with the variables and values for faster deployment.  Variables are written - variable_name = "value"
 3.  Deploy terraform code with
     - terraform init
     - terraform apply
