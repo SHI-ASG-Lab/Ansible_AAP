@@ -12,7 +12,7 @@ The TF code will prompt the user for the FQDN for each device, the azure subscri
 
 The prep_#_* files are BASH scripts that will setup all pre-reqs for the AAP installation.  
 
-The prep scripts must be run in order 0 being first and 2 being last.
+The prep scripts must be run in order 1 being first and 3 being last.
 
 Instructions for use:
 1.  Login to the Azure portal with rights to create resources and launch the cloud shell.
@@ -23,10 +23,10 @@ Instructions for use:
 4.  Enter the FQDN names of each vm, name of the resource group & admin password when prompted and yes to deploy.  The admin_public_ip prompt is asking for the public ip of the user who will be accessing.  If it's you using this, then figure out your public ip and use that.  You will use this password throughout the steps below.  I highly recommend you use the same password throughout this process for ease sake, but you don't have too.
 5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Select the controller vm (name will be the ac_fqdn from the tf deployment), copy the public ip address and connect via SSH using a terminal or command shell.  The user created is called "shi" - ssh shi@<public_ip_of_controller_vm>.  Use the password supplied during the tf deployment (pass value).
 6.  Download the scripts from the repo to the home directory and change to that directory.  Make each of the prep scripts executable with -  chmod +x prep* 
-7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
-8.  Run the second script with the shi user - ./prep_1_shi.bash
+7.  Run the first script with root  -  sudo ./prep_1_sudo.bash
+8.  Run the second script with the shi user - ./prep_2_shi.bash
     - This script is interactive and the user must follow the prompts.  When the RSA key is made, accept the defaults and hit enter 3x.  Set the root password when prompted.  This will be the password you will use to login to the web consoles of the AAP components (step 12).  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
-10.  Run the third script with root - sudo ./prep_2_sudo.bash
+10.  Run the third script with root - sudo ./prep_3_sudo.bash
     - This script is also interactive.  Follow and provide the root password set in last step during the SSH key copy.
     - This script will pause for error checking before launching the AAP setup script.  Hit any key to continue.
 12.  Connect to the Jumpbox vm through the Azure portal.  Deploy and use the bastion and connect with the shi account and the password set during the TF deployment.  Edit the c:\Windows\System32\drivers\etc\hosts with the IP's and FQDN's of the AAP components.
@@ -35,5 +35,5 @@ Instructions for use:
     - 10.250.1.7 <eda_fqdn> # Event Driven Automation FQDN
 14.  From the Jumpbox, open a browser and navigate to the Controller's domain name - https://<ac_fqdn>   Do the same for Automation Hub & Event Driven Automation controller - https://<ah_fqdn> - https://eda_fqdn>.  Login with "Admin" and the password set during the scripted install in step 8 for all 3 GUI's.  
 
-**This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_1_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.
+**This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_2_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.
 
