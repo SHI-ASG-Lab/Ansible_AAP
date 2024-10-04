@@ -6,6 +6,7 @@ The ansible_env.tf file is the terraform code to deploy the following -
  - Network security that only allows SSH connections from a specific IP
  - Public IP on the Controller for connectivity
  - Function tags are applied to all vm's
+ - A jumpbox for local access 
 
 The TF code will prompt the user for the FQDN for each device, a resource group name, the public ip of the user, and the admin password.  
 
