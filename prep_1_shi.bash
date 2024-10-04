@@ -51,8 +51,6 @@ echo
 sudo dnf -y install ansible-core
 mkdir /home/shi/ansibleprep
 cd /home/shi/ansibleprep
-#curl -o /home/shi/ansibleprep/Change_root_pwd.yml https://lodscripts.blob.core.windows.net/lod-sse-scripts/Change_root_pwd.yml
-#curl -o /home/shi/ansibleprep/Shell_command.yml https://lodscripts.blob.core.windows.net/lod-sse-scripts/Shell_command.yml
 mv /home/shi/Ansible_AAP/Change_root_pwd.yml /home/shi/ansibleprep/Change_root_pwd.yml
 mv /home/shi/Ansible_AAP/Shell_command.yml /home/shi/ansibleprep/Shell_command.yml
 
