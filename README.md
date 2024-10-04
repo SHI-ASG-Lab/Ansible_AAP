@@ -8,9 +8,9 @@ The ansible_env.tf file is the terraform code to deploy the following -
  - Function tags are applied to all vm's
  - A jumpbox for local access 
 
-The TF code will prompt the user for the FQDN for each device, a resource group name, the public ip of the user, and the admin password.  
+The TF code will prompt the user for the FQDN for each device, the azure subscription id, a resource group name, the public ip of the user, and the admin password.  
 
-The prep_#_* files are scripts that will setup all pre-reqs for the AAP installation.  
+The prep_#_* files are BASH scripts that will setup all pre-reqs for the AAP installation.  
 
 The prep scripts must be run in order 0 being first and 2 being last.
 
@@ -20,7 +20,7 @@ Instructions for use:
 3.  Deploy terraform code with
     - terraform init
     - terraform apply
-4.  Enter the FQDN names of each vm, name of the resource group & admin password when prompted and yes to deploy.  The admin_public_ip prompt is asking for the public ip of the user who will be accessing.  If it's you using this, then figure out your public ip and use that.  
+4.  Enter the FQDN names of each vm, name of the resource group & admin password when prompted and yes to deploy.  The admin_public_ip prompt is asking for the public ip of the user who will be accessing.  If it's you using this, then figure out your public ip and use that.  You will use this password throughout the steps below.  I highly recommend you use the same password throughout this process for ease sake, but you don't have too.
 5.  Once the deployment is complete, close the cloud shell and navigate the newly created resource group.  Select the controller vm (name will be the ac_fqdn from the tf deployment), copy the public ip address and connect via SSH using a terminal or command shell.  The user created is called "shi" - ssh shi@<public_ip_of_controller_vm>.  Use the password supplied during the tf deployment (pass value).
 6.  Download the scripts from the repo to the home directory and change to that directory.  Make each of the prep scripts executable with -  chmod +x prep* 
 7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
