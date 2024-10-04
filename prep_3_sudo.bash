@@ -57,7 +57,7 @@ echo
 
 
 # Verify directory is correct and lauch the AAP setup script
-cd /home/shi/ansible-automation-platform-setup-2.4-7
+cd /home/shi/ansible-automation-platform-setup-2.5-1
 echo
 echo
 echo
