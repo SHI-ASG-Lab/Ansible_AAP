@@ -105,9 +105,8 @@ echo
 echo "Creating inventory file"
 echo " # AAP Gateway hosts" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "[automationgateway]" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
+echo "$GW" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
-
-
 echo '[automationcontroller]' >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "$AC ansible_connection=local" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
