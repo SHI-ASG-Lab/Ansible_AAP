@@ -24,11 +24,15 @@ Instructions for use:
 6.  Download the scripts from the repo to the home directory and change to that directory.  Make each of the prep scripts executable with -  chmod +x prep* 
 7.  Run the first script with root  -  sudo ./prep_0_sudo.bash
 8.  Run the second script with the shi user - ./prep_1_shi.bash
-    - This script is interactive and the user must follow the prompts.  When the RSA key is made, accept the defaults and hit enter 3x.  Set the root password when prompted.  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
+    - This script is interactive and the user must follow the prompts.  When the RSA key is made, accept the defaults and hit enter 3x.  Set the root password when prompted.  This will be the password you will use to login to the web consoles of the AAP components (step 12).  Enter the password set during the terraform install when prompted during the SSH key copy.  I recommend using the same password.
 10.  Run the third script with root - sudo ./prep_2_sudo.bash
     - This script is also interactive.  Follow and provide the root password set in last step during the SSH key copy.
+    - This script will pause for error checking before launching the AAP setup script.  Hit any key to continue.
+12.  Connect to the Jumpbox vm through the Azure portal.  Deploy and use the bastion and connect with the shi account and the password set during the TF deployment.  Edit the c:\Windows\System32\drivers\etc\hosts with the IP's and FQDN's of the AAP components.
+    - 10.250.1.5 <ac_fqdn> # Controller FQDN
+    - 10.250.1.6 <ah.fqdn> # Automation Hub FQDN
+    - 10.250.1.7 <eda_fqdn> # Event Driven Automation FQDN
+13.  From the Jumpbox, open a browser and navigate to the Controller's domain name - https://<ac_fqdn>   Do the same for Automation Hub & Event Driven Automation controller - https://<ah_fqdn> - https://eda_fqdn>.  Login with "Admin" and the password set during the scripted install in step 8 for all 3 GUI's.  
 
-The third script will launch the AAP setup script
-
-This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_1_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.
+**This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_1_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.
 
