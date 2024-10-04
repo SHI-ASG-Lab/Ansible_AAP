@@ -3,9 +3,9 @@
 # Run this script from the Controller vm as root
 
 # 1. The first function of this script is to update the /etc/hosts file with the fqdn and ip address of each of the member vm's.
-# 2. Then, it registers the RHEL vm to the user's subscription.  
-# 3. Then it creates the SSH keys for root and copies them to each vm.  This part is interactive and will require the user to enter the password set in the first script for the root account.
-# 4. Lastly, it initiates the setup script for AAP
+# 2. Registers the RHEL vm to the user's subscription.  
+# 3. Create the SSH keys for root and copies them to each vm.  This part is interactive and will require the user to enter the password set in the first script for the root account.
+# 4. Pauses, then nitiates the setup script for AAP
 
 # **Download to the shi user's home directory and execute as the root user or with sudo**
 
@@ -61,7 +61,7 @@ cd /home/shi/ansible-automation-platform-setup-2.4-7
 echo
 echo
 echo
-read -p "Pausing for error checking.  Press Enter to continue" NOISE
+read -p "Pausing for error checking.  Press Enter to continue....." NOISE
 echo
 echo
 echo "Removing temporary install file"
