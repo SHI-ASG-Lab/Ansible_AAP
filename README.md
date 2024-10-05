@@ -37,5 +37,5 @@ Instructions for use:
     - 10.250.1.7 <eda_fqdn> # Event Driven Automation FQDN
 11.  From the Jumpbox, open a browser and navigate to the Controller's domain name - https://<ac_fqdn>   Do the same for Automation Hub & Event Driven Automation controller - https://<ah_fqdn> - https://<eda_fqdn>.  Login with "Admin" and the password set during the scripted install in step 8 for all 3 GUI's.  
 
-**This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_2_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.
+**This script downloads the AAP installer zip from a static storage account, so there ia a possibility it's out of date.  To change to a different AAP zip, edit prep_2_shi.bash, line 81 with the updated link and file name and update line 83 with new filename to unzip.  Then do a global replace for the old ansible zip for the new one to update the inventory file pieces.  If very possible newer versions will not work with this TF template though.  It's easy to modify the TF code to suite your needs.
 
