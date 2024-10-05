@@ -56,7 +56,8 @@ variable "admin_public_ip" {
   type = string
 }
 variable "aap_version" {
-  type = string
+  type    = string
+  default = "2.5"
 }
 
 # Create resource group
