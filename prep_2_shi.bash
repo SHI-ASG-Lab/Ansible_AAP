@@ -157,9 +157,6 @@ echo "pg_username='awx'" >> /home/shi/ansible-automation-platform-setup-2.5-1/in
 echo "pg_password='$PASS'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 #echo "pg_sslmode='prefer'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
-echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
-
-
 
 #echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 #echo "receptor_listener_port=27199" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
