@@ -132,7 +132,6 @@ echo "[database]" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "$DB" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 
-#echo "# Controller Configuration" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "[all:vars]" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 #echo "registry_url='registry.redhat.io'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "registry_username='$RHUSER'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
@@ -146,7 +145,6 @@ echo "automationgateway_pg_database='automationgateway'" >> /home/shi/ansible-au
 echo "automationgateway_pg_username='automationgateway'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "automationgateway_pg_password='$PASS'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
-
 
 echo "# Controller configuration" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "admin_password='$PASS'" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
