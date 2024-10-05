@@ -103,7 +103,7 @@ echo
 
 # Create new inventory file
 echo "Creating inventory file"
-echo "Ansible Automation Platform 2.5 inventory file" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
+echo "#Ansible Automation Platform 2.5 inventory file" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "# AAP Gateway hosts" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "[automationgateway]" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
 echo "$GW" >> /home/shi/ansible-automation-platform-setup-2.5-1/inventory
