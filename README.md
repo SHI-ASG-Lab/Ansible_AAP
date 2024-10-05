@@ -1,8 +1,10 @@
 Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
 
+The aap_24 is the TF code and prep scripts to deploy AAP 2.4.  The aap_25 is the TF code and prep scripts to deploy AAP 2.5.  The instructions for use are the same for both revisions.
+
 The ansible_env.tf file is the terraform code to deploy the following - 
  - Resource group
- - 4x RHEL 9.4 vm's
+ - RHEL 9.4 vm's
  - Network security that only allows SSH connections from a specific IP
  - Public IP on the Controller for connectivity
  - Function tags are applied to all vm's
