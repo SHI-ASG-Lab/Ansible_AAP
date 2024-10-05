@@ -1,5 +1,7 @@
 # Deploying RHEL vm's to be used for Ansible Automation platform and a lane in Azure
 
+# AAP 2.5
+
 # Terraform Azure provider and minimum version declaration
 terraform {
   required_providers {
