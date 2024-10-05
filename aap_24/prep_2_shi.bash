@@ -47,8 +47,8 @@ for i in {AC,AH,DB,EDA}
 sudo dnf -y install ansible-core
 mkdir /home/shi/ansibleprep
 cd /home/shi/ansibleprep
-mv /home/shi/Ansible_AAP/aap_24/change_root_pwd.yml /home/shi/ansibleprep/change_root_pwd.yml
-mv /home/shi/Ansible_AAP/aap_24/shell_command.yml /home/shi/ansibleprep/shell_command.yml
+mv /home/shi/Ansible_AAP/change_root_pwd.yml /home/shi/ansibleprep/change_root_pwd.yml
+mv /home/shi/Ansible_AAP/shell_command.yml /home/shi/ansibleprep/shell_command.yml
 
 # Creating the ansible variables file, adding the user's password & create the inventory file with the remote vm's info 
 echo "userpwd: $PASS" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
