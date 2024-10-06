@@ -52,9 +52,9 @@ variable "eda_fqdn" {
 variable "db_fqdn" {
   type = string
 }
-variable "gw_fqdn" {
-  type = string
-}
+#variable "gw_fqdn" {
+#  type = string
+#}
 variable "admin_public_ip" {
   type = string
 }
