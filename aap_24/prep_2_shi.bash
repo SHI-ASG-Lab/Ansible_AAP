@@ -111,7 +111,7 @@ echo
 
 # Create new inventory file
 echo "Creating inventory file"
-echo "# Ansible Automation Platform 2.5 inventory file" >> /home/shi/$DIR_NAME/inventory
+echo "# Ansible Automation Platform 2.4 inventory file" >> /home/shi/$DIR_NAME/inventory
 echo "" >> /home/shi/$DIR_NAME/inventory
 
 # Gateway
