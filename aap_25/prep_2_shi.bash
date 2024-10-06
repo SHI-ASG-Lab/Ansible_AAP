@@ -33,14 +33,26 @@ echo
 
 
 # Copy SSH keys for shi user
-for i in {AC,AH,DB,EDA,GW}
-  do
-    echo "Copying SSH keys to $i for shi user"
-    echo "Enter the same password from the terraform deployment "
-    echo
-    ssh-copy-id "$i"
-    echo
-  done
+echo "Copying SSH keys to AH for shi user"
+echo "Enter the same password from the terraform deployment "
+echo
+ssh-copy-id "$AH"
+echo
+echo "Copying SSH keys to DB for shi user"
+echo "Enter the same password from the terraform deployment "
+echo
+ssh-copy-id "$DB"
+echo
+echo "Copying SSH keys to EDA for shi user"
+echo "Enter the same password from the terraform deployment "
+echo
+ssh-copy-id "$EDA"
+echo
+echo "Copying SSH keys to GW for shi user"
+echo "Enter the same password from the terraform deployment "
+echo
+ssh-copy-id "$GW"
+echo
 
 
 # Installing ansible-core, downloading/moving the ansbile playbooks and vars file
