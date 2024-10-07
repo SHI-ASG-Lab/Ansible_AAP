@@ -97,7 +97,7 @@ cd /home/shi
 echo "Downloading the ansible setup zip"
 curl -o /home/shi/$AAP_ZIP https://lodscripts.blob.core.windows.net/lod-sse-scripts/$AAP_ZIP
 echo
-tar -xzvf /home/shi/$AAP_ZIP
+tar -xzf /home/shi/$AAP_ZIP
 echo
 
 
