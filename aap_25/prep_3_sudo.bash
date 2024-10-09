@@ -35,6 +35,10 @@ subscription-manager register --username "$RHUSER" --password "$RHPASS" --auto-a
 echo
 
 
+# Updating all packages
+dnf -y upgrade
+
+
 # Create SSH key for root
 echo "Creating SSH key"
 ssh-keygen
