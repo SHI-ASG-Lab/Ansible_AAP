@@ -1,0 +1,27 @@
+---
+  - hosts: all
+    vars_files: Change_root_pwd_vars.yml
+    become: true
+    become_method: sudo
+        
+    tasks:
+      - name: Add AC entry to /etc/hosts
+        ansible.builtin.lineinfile:
+          path: /etc/hosts
+          line: "10.250.1.5 {{ ac_fqdn }}"
+      - name: Add AH entry to /etc/hosts
+        ansible.builtin.lineinfile:
+          path: /etc/hosts
+          line: "10.250.1.6 {{ ah_fqdn }}"
+      - name: Add EDA entry to /etc/hosts
+        ansible.builtin.lineinfile:
+          path: /etc/hosts
+          line: "10.250.1.7 {{ eda_fqdn }}"
+      - name: Add DB entry to /etc/hosts
+        ansible.builtin.lineinfile:
+          path: /etc/hosts
+          line: "10.250.1.8 {{ db_fqdn }}"
+      - name: Add GW entry to /etc/hosts
+        ansible.builtin.lineinfile:
+          path: /etc/hosts
+          line: "10.250.1.9 {{ gw_fqdn }}"
