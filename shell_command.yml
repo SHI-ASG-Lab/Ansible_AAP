@@ -5,7 +5,7 @@
     become_method: sudo
         
     tasks:
-      - name: Issue shell command in linux
+      - name: Shell command - Register vm with RH subscription
         ansible.builtin.command: "{{ registration }}"
 
           
