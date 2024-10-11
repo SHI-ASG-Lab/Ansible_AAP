@@ -73,7 +73,7 @@ mv /home/shi/Ansible_AAP/update_hosts_file.yml /home/shi/ansibleprep/update_host
 
 # Creating the ansible variables file, adding the user's password & create the inventory file with the remote vm's info 
 echo "userpwd: $PASS" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
-echo "registration: ""subscription-manager register --username "$RHUSER" --password "$RHPASS" --auto-attach""" >> /home/shi/ansibleprep/Change_root_pwd_var
+echo "registration: ""subscription-manager register --username "$RHUSER" --password "$RHPASS" --auto-attach""" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
 echo "ac_fqdn: $AC" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
 echo "ah_fqdn: $AH" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
 echo "eda_fqdn: $EDA" >> /home/shi/ansibleprep/Change_root_pwd_vars.yml
