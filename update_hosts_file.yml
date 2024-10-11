@@ -25,3 +25,4 @@
         ansible.builtin.lineinfile:
           path: /etc/hosts
           line: "10.250.1.9 {{ gw_fqdn }}"
+        when: gw_fqdn is defined
