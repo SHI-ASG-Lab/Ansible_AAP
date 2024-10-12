@@ -13,7 +13,7 @@
 
 set -e
 
-# IPs are set statically via the terraform deployment.  Change variables to fit but be sure to match in the other prep scripts.
+# IPs are set statically via the terraform deployment.
 IP_AC=10.250.1.5
 IP_AH=10.250.1.6
 IP_EDA=10.250.1.7
