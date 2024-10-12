@@ -19,11 +19,12 @@ IP_AH=10.250.1.6
 IP_EDA=10.250.1.7
 IP_DB=10.250.1.8
 #IP_GW=10.250.1.9
+AAP_ZIP=ansible-automation-platform-setup-2.4-7.tar.gz
 source /home/shi/temp.log
 
 
 # Get the ansible zip name and write it to log file
-read -p "Enter the AAP zip name to be used:  " AAP_ZIP
+#read -p "Enter the AAP zip name to be used:  " AAP_ZIP
 echo "AAP_ZIP="$AAP_ZIP"" >> /home/shi/temp.log
 echo
 
