@@ -1,6 +1,6 @@
 ---
   - hosts: all
-    vars_files: Change_root_pwd_vars.yml
+    vars_files: vars.yml
     become: true
     become_method: sudo
         
