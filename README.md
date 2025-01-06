@@ -17,7 +17,7 @@ The prep_#_* files are BASH scripts that will setup all pre-reqs for the AAP ins
 The prep scripts must be run in order 1 being first and 3 being last.
 
 Instructions for use:
-1.  Login to the Azure portal with rights to create resources and launch the cloud shell.
+1.  Login to the Azure portal with rights to create resources and launch the BASH cloud shell.
 2.  Download the repo to the cloud shell with git or upload the ansible_env.tf file through the shell.  The only files needed in the cloud shell is the ansible_env.tf.  Ignore the prep scripts or delete them from the cloud shell.  You can create a terraform.tfvars file with the variables and values for faster deployment.  Variables are written - variable_name = "value"
 3.  Deploy terraform code with
     - terraform init
