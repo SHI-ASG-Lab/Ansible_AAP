@@ -20,7 +20,7 @@ set -e
 #IP_DB=10.250.1.8
 #IP_GW=10.250.1.9
 source /home/shi/temp.log
-STORAGE_ACCT=https://lodscripts.blob.core.windows.net/aap
+STORAGE_ACCT=https://aapdownload.blob.core.windows.net/aap
 AAP_ZIP=ansible-automation-platform-setup-2.5-7.tar.gz
 
 # Get the ansible zip name and write it to log file
