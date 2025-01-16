@@ -21,7 +21,7 @@ set -e
 #IP_GW=10.250.1.9
 source /home/shi/temp.log
 STORAGE_ACCT=https://aapdownload.blob.core.windows.net/aap
-AAP_ZIP=ansible-automation-platform-setup-2.5-7.tar.gz
+AAP_ZIP=ansible-automation-platform-setup-2.5-2.tar.gz
 
 # Get the ansible zip name and write it to log file
 #read -p "Enter the AAP zip name to be used:  " AAP_ZIP
