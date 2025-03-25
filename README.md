@@ -1,4 +1,4 @@
-#Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
+Automation to deploy the resources needed for Ansible Automation Platform in Azure.  
 
 The aap_24 is the TF code and prep scripts to deploy AAP 2.4.  The aap_25 is the TF code and prep scripts to deploy AAP 2.5.  The instructions for use are the same for both revisions.
 
