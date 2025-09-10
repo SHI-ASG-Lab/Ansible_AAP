@@ -218,6 +218,10 @@ resource "azurerm_public_ip" "controller-publicip" {
   sku                 = "Standard"
 }
 
+output "controller_publicip" {
+  value = resource.azurerm_public_ip.controller-publicip.ip_address
+}
+
 # Create Controller nic in internal subnet
 resource "azurerm_network_interface" "ac-nic" {
   name                = "ac-nic"
@@ -427,3 +431,4 @@ resource "azurerm_linux_virtual_machine" "gw-vm" {
   }
 
 }
+
