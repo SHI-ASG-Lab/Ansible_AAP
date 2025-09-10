@@ -21,7 +21,6 @@ provider "azurerm" {
     }
     virtual_machine {
       delete_os_disk_on_deletion     = true
-      graceful_shutdown              = false
       skip_shutdown_and_force_delete = true
     }
   }
@@ -426,4 +425,5 @@ resource "azurerm_linux_virtual_machine" "gw-vm" {
     sku       = "94_gen2"
     version   = "latest"
   }
+
 }
